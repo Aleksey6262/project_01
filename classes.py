@@ -24,10 +24,10 @@ class Cell:
         
 
 # Этап Создания экземпляра класса
-# a1 = Cell()
-# print(a1.content)
-# a1.set_value(100)
-# print(a1.content)
+a1 = Cell()
+print(a1.content)
+a1.set_value(100)
+print(a1.content)
 
 
 # ДЗ. 3.1

@@ -26,5 +26,33 @@
 #   - использовать готовые классы numpy.array() и pandas.DataFrame() запрещено!
 #   - проявите фантазию :)
 
-## Пока не выполнено, выполнено следующее ДЗ № 4.1 !!!!
+# Выполнение
+from random import randint
 
+class Matrix:
+    def __init__(self, rows, columns):
+        self.rows = rows
+        self.columns = columns
+        self.matrix = [[None] * columns for _ in range(rows)]
+
+    def set_value(self, row, column, value):
+        self.matrix[row][column] = value
+
+    def get_value(self, row, column):
+        return self.matrix[row][column]
+
+# Создаем объект класса Matrix
+n, m = 4, 5
+matrix = Matrix(n, m)
+
+# Заполняем матрицу случайными значениями от 1 до 10
+for i in range(n):
+    for j in range(m):
+        value = randint(1, 10)
+        matrix.set_value(i, j, value)
+
+# Выводим матрицу
+for i in range(n):
+    for j in range(m):
+        print("{:4d}".format(matrix.get_value(i, j)), end="")
+    print()
